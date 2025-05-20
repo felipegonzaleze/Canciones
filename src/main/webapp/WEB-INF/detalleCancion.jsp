@@ -16,5 +16,8 @@
 		<h3>Género: ${cancion.genero}</h3>
 		<h3>Idioma: ${cancion.idioma}</h3>
 		<p><a href="/canciones">Volver a lista de canciones</a></p>
+		<form method="GET" action="/canciones/formulario/editar/${cancion.id}">
+			<button>Editar canción</button>
+		</form>
 	</body>
 </html>

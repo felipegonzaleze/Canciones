@@ -29,7 +29,7 @@ public class Cancion {
 	@Size(min=3, message="Por favor proporciona un artista válido")
 	private String artista;	
 	
-	@Size(min=3, message="Por favor proporciona un albúm válido")
+	@Size(min=3, message="Por favor proporciona un álbum válido")
 	private String album;
 	
 	@Size(min=3, message="Por favor proporciona un género válido")
