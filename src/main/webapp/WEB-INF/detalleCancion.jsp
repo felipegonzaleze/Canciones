@@ -7,21 +7,30 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>Detalle de Canción</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	</head>
-	<body>
-		<h3>Canción: ${cancion.titulo}</h3>
-		<h3>Artista: ${cancion.artista}</h3>
-		<h3>Albúm: ${cancion.album}</h3>
-		<h3>Género: ${cancion.genero}</h3>
-		<h3>Idioma: ${cancion.idioma}</h3>
-		<p><a href="/canciones">Volver a lista de canciones</a></p>
-		<form method="GET" action="/canciones/formulario/editar/${cancion.id}">
-			<button>Editar canción</button>
-		</form>
-		<form method="POST" action="/canciones/eliminar/${cancion.id}">
-			<input type="hidden" name="_method" value="DELETE">
-			<button>Eliminar canción</button>
-		</form>
+	<body class="container mt-4">
+		<div class="card">
+			<div class="card-body">
+				<h3 class="card-title mb-3">Canción: ${cancion.titulo}</h3>
+				<h4 class="card-subtitle mb-2 text-muted">Artista: ${cancion.artista}</h4>
+				<p class="card-text">Albúm: ${cancion.album}</p>
+				<p class="card-text">Género: ${cancion.genero}</p>
+				<p class="card-text">Idioma: ${cancion.idioma}</p>
+				
+				<div class="mt-4">
+					<a href="/canciones" class="btn btn-secondary">Volver a lista de canciones</a>
+					<form method="GET" action="/canciones/formulario/editar/${cancion.id}" class="d-inline">
+						<button class="btn btn-primary">Editar canción</button>
+					</form>
+					<form method="POST" action="/canciones/eliminar/${cancion.id}" class="d-inline">
+						<input type="hidden" name="_method" value="DELETE">
+						<button class="btn btn-danger">Eliminar canción</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>

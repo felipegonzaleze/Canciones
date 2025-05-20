@@ -8,37 +8,43 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Agregar canción</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	</head>
-	<body>
-		<h1>Agregar canción</h1>
-		<form:form method="POST" action="/canciones/procesa/agregar" modelAttribute="cancion">
-				<div>
-					<form:label path="titulo">Título:</form:label>
-					<form:input path="titulo"/>
-					<form:errors path="titulo"/>
-				</div>
-				<div>
-					<form:label path="artista">Artista:</form:label>
-					<form:input path="artista"/>
-					<form:errors path="artista"/>
-				</div>
-				<div>
-					<form:label path="album">Albúm: </form:label>
-					<form:input path="album"/>
-					<form:errors path="album"/>
-				</div>
-				<div>
-					<form:label path="genero">Género:</form:label>
-					<form:input path="genero"/>
-					<form:errors path="genero"/>
-				</div>
-				<div>
-					<form:label path="idioma">Idioma:</form:label>
-					<form:input path="idioma"/>
-					<form:errors path="idioma"/>
-				</div>
-				<button>Agregar</button>
-		</form:form>
-		<p><a href="/canciones">Volver a lista de canciones</a></p>
+	<body class="container mt-4">
+		<h1 class="mb-4">Agregar canción</h1>
+		<div class="card">
+			<div class="card-body">
+				<form:form method="POST" action="/canciones/procesa/agregar" modelAttribute="cancion">
+					<div class="mb-3">
+						<form:label path="titulo" class="form-label">Título:</form:label>
+						<form:input path="titulo" class="form-control"/>
+						<form:errors path="titulo" class="text-danger"/>
+					</div>
+					<div class="mb-3">
+						<form:label path="artista" class="form-label">Artista:</form:label>
+						<form:input path="artista" class="form-control"/>
+						<form:errors path="artista" class="text-danger"/>
+					</div>
+					<div class="mb-3">
+						<form:label path="album" class="form-label">Albúm:</form:label>
+						<form:input path="album" class="form-control"/>
+						<form:errors path="album" class="text-danger"/>
+					</div>
+					<div class="mb-3">
+						<form:label path="genero" class="form-label">Género:</form:label>
+						<form:input path="genero" class="form-control"/>
+						<form:errors path="genero" class="text-danger"/>
+					</div>
+					<div class="mb-3">
+						<form:label path="idioma" class="form-label">Idioma:</form:label>
+						<form:input path="idioma" class="form-control"/>
+						<form:errors path="idioma" class="text-danger"/>
+					</div>
+					<button class="btn btn-primary">Agregar</button>
+				</form:form>
+			</div>
+		</div>
+		<a href="/canciones" class="btn btn-secondary mt-3">Volver a lista de canciones</a>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
