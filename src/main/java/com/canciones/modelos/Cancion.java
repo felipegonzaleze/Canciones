@@ -23,15 +23,19 @@ public class Cancion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	
+	@Size(min=5, message="Por favor proporciona un título válido")
 	private String titulo;
+	
+	@Size(min=3, message="Por favor proporciona un artista válido")
 	private String artista;	
+	
+	@Size(min=3, message="Por favor proporciona un albúm válido")
 	private String album;
 	
-	@Size(min=3, message="Por favor proporciona el nombre del género")
+	@Size(min=3, message="Por favor proporciona un género válido")
 	private String genero;
 	
-	@Size(min=3, message="Por favor proporcina el idioma de la canción")
+	@Size(min=3, message="Por favor proporciona un idioma válido")
 	private String idioma;
 	
 	@Temporal(TemporalType.TIMESTAMP)
