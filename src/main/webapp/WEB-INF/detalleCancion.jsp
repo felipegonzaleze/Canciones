@@ -19,5 +19,9 @@
 		<form method="GET" action="/canciones/formulario/editar/${cancion.id}">
 			<button>Editar canción</button>
 		</form>
+		<form method="POST" action="/canciones/eliminar/${cancion.id}">
+			<input type="hidden" name="_method" value="DELETE">
+			<button>Eliminar canción</button>
+		</form>
 	</body>
 </html>
